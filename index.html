@@ -1,0 +1,91 @@
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="survey.css">
+  
+  <title>Survey Form</title>
+
+  <link rel="shortcut icon" type="image/jpg" href="images/icon.png"/>
+
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Movie Survey Form</h1>
+      <p id="description" class="description text-center">
+        Please answer the following questions.
+      </p>
+    </header>
+    <form id="survey-form">
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Name" required="">
+      </div>
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email" required="">
+      </div>
+      <div class="form-group">
+        <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+        <input type="number" name="age" id="number" min="0" max="99" class="form-control" placeholder="Age">
+      </div>
+
+      <div class="form-group">
+        <p>Gender</p>
+        <label>
+          <input name="gender" value="male" type="radio" class="input-radio" checked="">Male</label>
+        <label>
+          <input name="gender" value="female" type="radio" class="input-radio">Female</label>
+        <label>
+          <input name="gender" value="other" type="radio" class="input-radio">Other</label>
+      </div>
+
+      <div class="form-group">
+        <p>
+          Favourite Movie Genre?
+        </p>
+        <select id="dropdown" name="favourite" class="form-control" required="">
+          <option disabled="" selected="" value="">Select an option</option>
+          <option value="comedy">Comedy</option>
+          <option value="drama">Drama</option>
+          <option value="horror">Horror</option>
+          <option value="romance">Romance</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <p>
+          How Do You Watch Movies?
+          <span class="clue">(Check all that apply)</span>
+        </p>
+
+        <label><input name="watch" value="cinema" type="checkbox" class="input-checkbox">Cinema</label>
+        <label>
+          <input name="watch" value="netflix" type="checkbox" class="input-checkbox">Netflix</label>
+        <label><input name="watch" value="amazon-prime" type="checkbox" class="input-checkbox">Amazon Prime</label>
+        <label><input name="watch" value="disney-plus" type="checkbox" class="input-checkbox">Disney Plus</label>
+        <label><input name="watch" value="apple-tv" type="checkbox" class="input-checkbox">Apple TV</label>
+        <label><input name="watch" value="youtube" type="checkbox" class="input-checkbox">YouTube</label>
+        <label><input name="watch" value="tv" type="checkbox" class="input-checkbox">TV</label>
+      </div>
+
+      <div class="form-group">
+        <p>What's Your Favourite Movie?</p>
+        <textarea id="comments" class="input-textarea" name="comment"
+          placeholder="Enter your favourite here..."></textarea>
+      </div>
+
+      <div class="submit-button">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
